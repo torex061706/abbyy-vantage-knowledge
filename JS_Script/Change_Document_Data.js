@@ -1,27 +1,23 @@
-var deliveryDateField = Context.GetField("Delivery Date");
+var documentDateField = Context.GetField("Document Date");
 
-if (!deliveryDateField) {
+if (!documentDateField) {
     Context.CheckSucceeded = false;
     Context.ErrorMessage =
-        'Field "Delivery Date" not found. Please check the field name or path.';
+        'Field "Document Date" not found. Please check the field name or path.';
     return;
 }
 
-if (deliveryDateField.Value === null || deliveryDateField.Value === "") {
-    // ไม่มีค่าให้แปลง จึงไม่แก้ไขค่า Field
+if (documentDateField.Value === null || documentDateField.Value === "") {
     return;
 }
 
-var originalText = String(deliveryDateField.Value).trim();
+var originalText = String(documentDateField.Value).trim();
 
-// หากเป็นรูปแบบ d.m.yyyy หรือ dd.mm.yyyy อยู่แล้ว ให้คงค่าเดิมไว้
-var alreadyFormatted = /^\d{1,2}\.\d{1,2}\.\d{4}$/.test(originalText);
-
-if (alreadyFormatted) {
+// หากเป็น d.m.yyyy หรือ dd.mm.yyyy อยู่แล้ว ให้คงค่าเดิมไว้
+if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(originalText)) {
     return;
 }
 
-// ตัดชื่อวันเฉพาะเมื่อคำแรกเป็นชื่อวัน เช่น Friday, July 10, 2026
 var dateText = originalText;
 var dayNames = {
     monday: true,
@@ -33,6 +29,7 @@ var dayNames = {
     sunday: true
 };
 
+// ตัดชื่อวันเฉพาะกรณีมีชื่อวันอยู่ด้านหน้า เช่น Friday,
 var firstWord = dateText.split(/\s+/)[0].replace(",", "").toLowerCase();
 if (dayNames[firstWord]) {
     var firstComma = dateText.indexOf(",");
@@ -57,11 +54,10 @@ var monthMap = {
     december: "12"
 };
 
-var monthName = parts[0] ? parts[0].toLowerCase() : "";
-var month = monthMap[monthName];
+var month = monthMap[parts[0] ? parts[0].toLowerCase() : ""];
 var day = parts[1] ? parts[1].replace(",", "") : "";
 var year = parts[2] || "";
 
 if (month && /^\d{1,2}$/.test(day) && /^\d{4}$/.test(year)) {
-    deliveryDateField.Value = day + "." + month + "." + year;
+    documentDateField.Value = day + "." + month + "." + year;
 }
