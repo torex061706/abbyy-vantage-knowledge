@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Extended the verified Delivery Date normalization script and use case for `dd/MM/yy`, `d MMM yyyy`, and `dd-MMM-yy` source formats.
+- Added a Windows Script Host regression check for Delivery Date normalization.
+
 ## 0.1.0 — 2026-08-05
 
 - Created initial knowledge-base structure

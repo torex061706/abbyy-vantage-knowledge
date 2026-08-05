@@ -1,5 +1,17 @@
 # Delivery Date Normalization
 
+## รูปแบบเพิ่มเติมที่ยืนยันแล้ว
+
+**[VERIFIED REAL PROJECT]** — ทดสอบและยืนยันการทำงานใน ABBYY project สำหรับ input/output ต่อไปนี้:
+
+| Input | Expected output |
+|---|---|
+| `17/02/26` | `17/02/2026` |
+| `26 Feb 2026` | `26/02/2026` |
+| `19-Sep-25` | `19.9.2025` |
+
+สำหรับ `dd/MM/yy` และ `dd-MMM-yy` ปีสองหลักถูกตีความเป็น `20yy` ตามผลการทดสอบที่ยืนยันแล้ว ค่าที่เป็น `d.m.yyyy`, `dd.mm.yyyy`, `d/MM/yyyy` หรือ `dd/MM/yyyy` อยู่แล้วจะไม่ถูกแก้ไข
+
 ## สถานะหลักฐาน
 
 **[VERIFIED REAL PROJECT]** — ใช้กับ Field `Delivery Date` ในโปรเจกต์ OCR Sale Order และทดสอบตามรูปแบบวันที่ที่ระบุใน Use Case นี้แล้ว

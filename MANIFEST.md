@@ -27,3 +27,4 @@
 | `templates/*.js` | Reusable script skeletons | Derived from verified patterns | When patterns improve |
 | `JS_Script/Change_Delivery_Data.js` | Delivery Date conversion script | Verified project | When field or date requirements change |
 | `JS_Script/Change_Document_Data.js` | Document Date conversion script | Verified project | When field or date requirements change |
+| `tests/delivery-date-normalization-test.js` | Windows Script Host regression check for Delivery Date normalization | Derived practice | When Delivery Date formats change |
