@@ -10,3 +10,4 @@
 - Added ABBYY/SAP responsibility boundary
 - Added AI agent routing and evidence rules
 - Marked Data Catalog access as conflicting evidence
+- Added verified Delivery Date normalization use case and `Change_Delivery_Data.js`
