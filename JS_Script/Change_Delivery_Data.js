@@ -21,12 +21,24 @@ if (alreadyFormatted) {
     return;
 }
 
-// ตัวอย่าง: Friday, July 10, 2026 → July 10, 2026
+// ตัดชื่อวันเฉพาะเมื่อคำแรกเป็นชื่อวัน เช่น Friday, July 10, 2026
 var dateText = originalText;
-var firstComma = dateText.indexOf(",");
+var dayNames = {
+    monday: true,
+    tuesday: true,
+    wednesday: true,
+    thursday: true,
+    friday: true,
+    saturday: true,
+    sunday: true
+};
 
-if (firstComma >= 0) {
-    dateText = dateText.substring(firstComma + 1).trim();
+var firstWord = dateText.split(/\s+/)[0].replace(",", "").toLowerCase();
+if (dayNames[firstWord]) {
+    var firstComma = dateText.indexOf(",");
+    if (firstComma >= 0) {
+        dateText = dateText.substring(firstComma + 1).trim();
+    }
 }
 
 var parts = dateText.split(/\s+/);
