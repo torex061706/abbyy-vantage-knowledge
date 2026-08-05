@@ -11,3 +11,5 @@
 - Added AI agent routing and evidence rules
 - Marked Data Catalog access as conflicting evidence
 - Added verified Delivery Date normalization use case and `Change_Delivery_Data.js`
+- Added verified Document Date normalization use case and `Change_Document_Data.js`
+- Hardened date scripts against missing fields and date formats without a weekday prefix
