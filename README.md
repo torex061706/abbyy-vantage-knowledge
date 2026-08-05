@@ -38,6 +38,7 @@
 | Sample Scripts | Verified — ABBYY Official |
 | Vendor Validation | Verified — Real Project |
 | Address Normalization | Verified — Real Project pattern |
+| Delivery Date Normalization | Verified — Real Project |
 | Table Validation | Verified — ABBYY Sample |
 | JavaScript runtime compatibility | Partial — ยังไม่สรุปครบ |
 | Data Catalog in Advanced Script Rule | Conflicting evidence — ห้ามใช้เป็นข้อเท็จจริง |
