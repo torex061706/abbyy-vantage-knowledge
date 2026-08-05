@@ -26,6 +26,8 @@
 8. [`templates/`](templates/)
 9. [`prompts/`](prompts/)
 
+สำหรับลำดับการทำงานของ AI และวิธีตัดสินว่าเนื้อหาใดควรสร้างหรือหยุดไว้ก่อน อ่าน [`docs/agent-workflow.md`](docs/agent-workflow.md)
+
 ## สถานะปัจจุบัน
 
 | ส่วน | สถานะ |
