@@ -18,6 +18,7 @@
 | `docs/coding-standard.md` | Safe coding conventions | Derived practice | When standards improve |
 | `docs/testing.md` | Test requirements | Derived practice | When test process changes |
 | `docs/limitations.md` | Unsupported/unverified areas | Mixed | As evidence changes |
+| `docs/agent-workflow.md` | Evidence-first workflow for AI answers | Internal policy | When agent workflow changes |
 | `prompts/generate-script.md` | AI script generation prompt | Internal | When output needs change |
 | `prompts/review-script.md` | AI review prompt | Internal | When review needs change |
 | `prompts/debug-script.md` | AI debugging prompt | Internal | When error catalog grows |
