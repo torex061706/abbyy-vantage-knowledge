@@ -4,12 +4,14 @@
 
 ## Requirement
 
-Map the extracted `Ship To` value as follows:
+Use only the first four characters of the extracted `Ship To` value after lowercasing and removing whitespace:
 
-| Input after whitespace normalization | Output |
+| First four characters | Output |
 |---|---|
-| `SSMC Plant1` | `12345` |
-| `SSMC Plant2` | `67891` |
+| `1500` | `11103709` |
+| `9999` | `11103548` |
+| `11103709` | Keep unchanged |
+| `11103548` | Keep unchanged |
 
 ## Script
 
@@ -19,16 +21,19 @@ Implementation: `JS_Script/Map_ShipTo.js`
 
 - Reads `Ship To` once with `Context.GetField()`.
 - Lowercases the value and removes whitespace.
+- Extracts the first four characters with `substring(0, 4)`.
 - Writes the mapped value back to the same field.
-- Fails validation for empty or unsupported values.
+- Keeps already mapped values unchanged.
+- Fails validation for empty or unsupported prefixes.
 
 ## Test cases
 
 | Input | Expected result |
 |---|---|
-| `SSMC Plant1` | Field becomes `12345` |
-| `SSMC Plant2` | Field becomes `67891` |
-| `SSMCPlant1` | Field becomes `12345` |
+| `1500 ABC` | Field becomes `11103709` |
+| `9999 XYZ` | Field becomes `11103548` |
+| `11103709` | Field remains `11103709` |
+| `11103548` | Field remains `11103548` |
 | Empty value | Controlled failure |
 | Other value | Controlled failure |
 

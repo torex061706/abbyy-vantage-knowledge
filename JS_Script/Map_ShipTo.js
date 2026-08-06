@@ -10,15 +10,18 @@ if (!shipToField) {
     var shipTo = String(shipToField.Value)
         .toLowerCase()
         .replace(/\s/g, "");
+    var shipToPrefix = shipTo.substring(0, 4);
 
-    if (shipTo === "ssmcplant1") {
-        shipToField.Value = "12345";
-    } else if (shipTo === "ssmcplant2") {
-        shipToField.Value = "67891";
+    if (shipToPrefix === "1500") {
+        shipToField.Value = "11103709";
+    } else if (shipToPrefix === "9999") {
+        shipToField.Value = "11103548";
+    } else if (shipTo === "11103709" || shipTo === "11103548") {
+        // Keep an already mapped value unchanged.
     } else {
         Context.CheckSucceeded = false;
         Context.ErrorMessage =
-            "Unsupported Ship To value. Found: "
+            "Unsupported Ship To prefix. Found: "
             + String(shipToField.Value);
     }
 }

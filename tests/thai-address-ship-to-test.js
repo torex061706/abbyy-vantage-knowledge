@@ -45,13 +45,17 @@ assertEqual(runAddress(thaiPrefix), true, "Thai address prefix");
 assertEqual(runAddress(thaiFullAddress), true, "Thai full address");
 assertEqual(runAddress("570 MOO 4 SUKHUMVIT"), false, "non-Thai address");
 
-var plant1 = runShipTo("SSMC Plant1");
-assertEqual(plant1.value, "12345", "SSMC Plant1 mapping");
-assertEqual(plant1.succeeded, true, "SSMC Plant1 status");
+var plant1 = runShipTo("1500 ABC");
+assertEqual(plant1.value, "11103709", "1500 mapping");
+assertEqual(plant1.succeeded, true, "1500 status");
 
-var plant2 = runShipTo("SSMC Plant2");
-assertEqual(plant2.value, "67891", "SSMC Plant2 mapping");
-assertEqual(plant2.succeeded, true, "SSMC Plant2 status");
+var plant2 = runShipTo("9999 XYZ");
+assertEqual(plant2.value, "11103548", "9999 mapping");
+assertEqual(plant2.succeeded, true, "9999 status");
+
+var mapped = runShipTo("11103709");
+assertEqual(mapped.value, "11103709", "already mapped value");
+assertEqual(mapped.succeeded, true, "already mapped status");
 
 var unsupported = runShipTo("Other Plant");
 assertEqual(unsupported.succeeded, false, "unsupported Ship To status");

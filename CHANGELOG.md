@@ -5,6 +5,7 @@
 - Extended the verified Delivery Date normalization script and use case for `dd/MM/yy`, `d MMM yyyy`, and `dd-MMM-yy` source formats.
 - Added a Windows Script Host regression check for Delivery Date normalization.
 - Added separate Thai Vender Address prefix validation and Ship To mapping use cases/scripts.
+- Updated Ship To mapping to use the first four characters and preserve already mapped values.
 
 ## 0.1.0 — 2026-08-05
 
