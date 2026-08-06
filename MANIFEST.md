@@ -13,6 +13,8 @@
 | `official/references.md` | Source index | ABBYY Official/Support | When sources change |
 | `use-cases/vendor-validation.md` | Thai Parkerizing validation | Verified project | When requirement/test changes |
 | `use-cases/address-normalization.md` | Address comparison normalization | Verified pattern | When test coverage changes |
+| `use-cases/thai-address-validation.md` | Thai Vender Address prefix validation | Verified project | When address requirement/test changes |
+| `use-cases/ship-to-mapping.md` | Ship To value mapping | Verified project | When mapping requirement changes |
 | `use-cases/delivery-date-normalization.md` | Delivery Date format normalization | Verified project | When date formats or tests change |
 | `use-cases/document-date-normalization.md` | Document Date format normalization | Verified project | When date formats or tests change |
 | `use-cases/sap-sale-order-boundary.md` | ABBYY-to-SAP responsibility boundary | Project evidence | When integration contract changes |
@@ -27,4 +29,7 @@
 | `templates/*.js` | Reusable script skeletons | Derived from verified patterns | When patterns improve |
 | `JS_Script/Change_Delivery_Data.js` | Delivery Date conversion script | Verified project | When field or date requirements change |
 | `JS_Script/Change_Document_Data.js` | Document Date conversion script | Verified project | When field or date requirements change |
+| `JS_Script/Check_VenderAddress_Thai.js` | Thai Vender Address prefix validation script | Verified project | When address requirement changes |
+| `JS_Script/Map_ShipTo.js` | Ship To mapping script | Verified project | When mapping requirement changes |
 | `tests/delivery-date-normalization-test.js` | Windows Script Host regression check for Delivery Date normalization | Derived practice | When Delivery Date formats change |
+| `tests/thai-address-ship-to-test.js` | Windows Script Host regression check for Thai Address and Ship To mapping | Derived practice | When these rules change |
