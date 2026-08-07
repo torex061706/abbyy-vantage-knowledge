@@ -1,5 +1,17 @@
 # Address Normalization for Comparison
 
+## Confirmed accepted English address patterns
+
+**[VERIFIED REAL PROJECT]** — `Vender Address` is accepted when the normalized value contains at least one of these tokens:
+
+| Source pattern | Required normalized token |
+|---|---|
+| `570 MOO 4, SUKHUMVIT RD., ...` | `570moo4sukhumvitrd` |
+| `570 MOO 4, BANGPOO INDUSTRIAL ESTATE SOL 12, PRAKASA, ...` | `570moo4bangpooindustrialestatesol12prakasa` |
+| Short OCR variant `570 M 4 SUKHUMVIT` | `570m4sukhumvit` |
+
+Implementation: `JS_Script/Check_VenderAddress.js`
+
 **Evidence:** `[VERIFIED REAL PROJECT PATTERN]`
 
 ## Input example

@@ -7,6 +7,7 @@
 - Added separate Thai Vender Address prefix validation and Ship To mapping use cases/scripts.
 - Updated Ship To mapping to use the first four characters and preserve already mapped values.
 - Added support for full day-month-year input such as `24 January 2025` in Delivery Date normalization.
+- Extended English Vender Address validation for Sukhumvit, Bangpoo Industrial Estate, and the confirmed short OCR variant.
 
 ## 0.1.0 — 2026-08-05
 

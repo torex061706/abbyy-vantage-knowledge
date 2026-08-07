@@ -30,6 +30,8 @@
 | `JS_Script/Change_Delivery_Data.js` | Delivery Date conversion script | Verified project | When field or date requirements change |
 | `JS_Script/Change_Document_Data.js` | Document Date conversion script | Verified project | When field or date requirements change |
 | `JS_Script/Check_VenderAddress_Thai.js` | Thai Vender Address prefix validation script | Verified project | When address requirement changes |
+| `JS_Script/Check_VenderAddress.js` | English Vender Address pattern validation script | Verified project | When address patterns change |
 | `JS_Script/Map_ShipTo.js` | Ship To mapping script | Verified project | When mapping requirement changes |
 | `tests/delivery-date-normalization-test.js` | Windows Script Host regression check for Delivery Date normalization | Derived practice | When Delivery Date formats change |
 | `tests/thai-address-ship-to-test.js` | Windows Script Host regression check for Thai Address and Ship To mapping | Derived practice | When these rules change |
+| `tests/vendor-address-test.js` | Windows Script Host regression check for English Vender Address patterns | Derived practice | When address patterns change |
