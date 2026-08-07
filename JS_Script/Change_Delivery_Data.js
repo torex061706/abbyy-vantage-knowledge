@@ -33,6 +33,7 @@ if (!deliveryDateField) {
         }
 
         var monthFirstMatch = /^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})$/.exec(dateText);
+        var fullDayMonthYearMatch = /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/.exec(dateText);
         var dayMonthYearMatch = /^(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})$/.exec(dateText);
         var shortHyphenMatch = /^(\d{1,2})-([A-Za-z]{3})-(\d{2})$/.exec(dateText);
         var slashShortYearMatch = /^(\d{1,2})\/(\d{1,2})\/(\d{2})$/.exec(dateText);
@@ -52,6 +53,13 @@ if (!deliveryDateField) {
                 }
 
                 deliveryDateField.Value = dayMonthYearMatch[1] + "/" + dayMonthYear + "/" + dayMonthYearMatch[3];
+            }
+        } else if (fullDayMonthYearMatch) {
+            var fullDayMonthYear = monthMap[fullDayMonthYearMatch[2].toLowerCase()];
+
+            if (fullDayMonthYear) {
+                deliveryDateField.Value =
+                    fullDayMonthYearMatch[1] + "." + fullDayMonthYear + "." + fullDayMonthYearMatch[3];
             }
         } else if (shortHyphenMatch) {
             var shortHyphenMonth = monthMap[shortHyphenMatch[2].toLowerCase()];

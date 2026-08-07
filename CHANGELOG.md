@@ -6,6 +6,7 @@
 - Added a Windows Script Host regression check for Delivery Date normalization.
 - Added separate Thai Vender Address prefix validation and Ship To mapping use cases/scripts.
 - Updated Ship To mapping to use the first four characters and preserve already mapped values.
+- Added support for full day-month-year input such as `24 January 2025` in Delivery Date normalization.
 
 ## 0.1.0 — 2026-08-05
 

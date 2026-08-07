@@ -33,6 +33,7 @@ function assertEqual(actual, expected, input) {
 
 assertEqual(runWithValue("Friday, July 10, 2026"), "10.7.2026", "Friday, July 10, 2026");
 assertEqual(runWithValue("June 29, 2026"), "29.6.2026", "June 29, 2026");
+assertEqual(runWithValue("24 January 2025"), "24.1.2025", "24 January 2025");
 assertEqual(runWithValue("17/02/26"), "17/02/2026", "17/02/26");
 assertEqual(runWithValue("26 Feb 2026"), "26/02/2026", "26 Feb 2026");
 assertEqual(runWithValue("19-Sep-25"), "19.9.2025", "19-Sep-25");
